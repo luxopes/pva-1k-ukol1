@@ -51,3 +51,7 @@ loop:
 end
 
 print l"Correct number was {secret_number}"
+
+# Note:
+# For running this code, you can download compliler for Linux x86 here:
+# https://lsl.lux-ai.cz/
