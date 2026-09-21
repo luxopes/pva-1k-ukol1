@@ -1,37 +1,37 @@
 import random as r
 
-a = r.randint(1, 100)
+secret_number = r.randint(1, 100)
 
-spatne = 0
+invalid_attempts = 0
 
 while True:
 
-    text = input("Your guess: ")
+    user_input = input("Your guess: ")
 
     try:
-        b = int(text.strip())
+        guess = int(user_input.strip())
 
     except ValueError:
 
-        spatne += 1
+        invalid_attempts += 1
 
-        if spatne >= 5:
+        if invalid_attempts >= 5:
             print("Too many invalid inputs, ending.")
             break
 
         print("That is not a whole number, try again.")
         continue
 
-    spatne = 0
+    invalid_attempts = 0
 
-    if a < b:
+    if secret_number < guess:
         print("Too big!")
 
-    elif a > b:
+    elif secret_number > guess:
         print("Too small!")
 
     else:
         print("Correct!")
         break
 
-print(f"Correct number was {a}")
+print(f"Correct number was {secret_number}")
