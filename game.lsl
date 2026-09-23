@@ -1,6 +1,6 @@
 load random as r
 
-secret_number = r.randint(1, 1000)
+secret_number = r.randint(1, 100)
 invalid_attempts = 0
 
 loop:
